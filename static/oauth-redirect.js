@@ -70,8 +70,4 @@
     }
   });
 
-  // Optionally close the popup after a short delay. The opener should handle receipt/validation.
-  setTimeout(() => {
-    try { window.close(); } catch (e) {}
-  }, 700);
 })();
