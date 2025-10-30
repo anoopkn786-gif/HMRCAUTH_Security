@@ -18,13 +18,13 @@
   // Best-effort derive the opener origin to use as targetOrigin for postMessage.
   // Prefer the opener to pass its origin explicitly if possible.
   let targetOrigin = "*";
-  try {
-    if (document.referrer) {
-      targetOrigin = new URL(document.referrer).origin;
-    }
-  } catch (e) {
-    // fallback to "*" if parsing fails
-  }
+  // try {
+  //   if (document.referrer) {
+  //     targetOrigin = new URL(document.referrer).origin;
+  //   }
+  // } catch (e) {
+  //   // fallback to "*" if parsing fails
+  // }
 
   // Show result to user (textContent to avoid XSS)
   if (error) {
