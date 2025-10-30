@@ -39,10 +39,13 @@
   } else {
     codeEl.textContent = 'No code found in the redirect.';
   }
-
+console.log(window);
   // Post message to opener (best-effort). The opener must still validate origin and state.
   try {
     if (window.opener && !window.opener.closed) {
+      
+      console.log(targetOrigin);
+      console.log(message);
       window.opener.postMessage(message, targetOrigin);
     }
   } catch (err) {
