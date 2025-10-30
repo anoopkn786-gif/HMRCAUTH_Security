@@ -13,7 +13,7 @@
   const copiedMsg = document.getElementById('copiedMsg');
 
   // Structured message to send to opener / other listeners (do not log secrets)
-  const message = { type: "oauthResponse", code: code || null, state: state || null, error: error || null };
+  const message = { type: "oauthResponse", code, state };
 
   // Best-effort derive the opener origin to use as targetOrigin for postMessage.
   // Prefer the opener to pass its origin explicitly if possible.
