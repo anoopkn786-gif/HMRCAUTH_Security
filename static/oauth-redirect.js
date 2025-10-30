@@ -49,15 +49,6 @@
     // swallow errors to avoid exposing secrets
   }
 
-  // Broadcast structured message (close channel immediately)
-  try {
-    const channel = new BroadcastChannel('HMRCAUTHTOKEN');
-    channel.postMessage(message);
-    channel.close();
-  } catch (err) {
-    // BroadcastChannel may be unavailable in some environments
-  }
-
   // Enable copy-to-clipboard button (user-initiated)
   copyBtn.addEventListener('click', async () => {
     if (!code) return;
